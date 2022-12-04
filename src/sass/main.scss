@@ -4,3 +4,11 @@
 @import './utils/variables';
 @import './utils/mixins';
 @import './utils/keyframes';
+
+@import './../components/Header/header';
+@import './../components/Footer/footer';
+
+@import './../pages/Home/home';
+@import './../pages/Lodging/lodging';
+@import './../pages/About/about';
+@import './../pages/Error/error';
