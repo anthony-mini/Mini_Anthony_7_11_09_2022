@@ -1,0 +1,16 @@
+@mixin font-nav {
+    font : {
+        family: 'Montserrat' ;
+        size: 12px;
+        weight: 500;
+    }
+    line-height: 17.11px;
+    color: $salmon-color;
+    text-align: right;
+}
+
+@mixin layout-section {
+    background: #000000;
+    mix-blend-mode: darken;
+    opacity: 0.3;
+}
