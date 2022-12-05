@@ -9,3 +9,27 @@ $black-color: #000000; // Footer background
 $grey-background-color: #F7F7F7; // Dropdown background color & background location
 $grey-rate-color: #E3E3E3; // Stars background color
 $grey-personas-color: #C4C4C4; // Personas background color
+
+/**
+    sass:map
+**/
+
+$breakpoint: (
+   mobile-S: 320px,
+   mobile-M: 375px,
+   mobile-L: 425px,
+   tablette: 768px,
+   laptop: 1024px,
+   laptop-L: 1440px,
+   desktop-XL: 2000px,
+);
+
+/**
+    font-familly
+**/
+
+$montserrat: (
+    regular: 400,
+    medium: 500,
+);
+    
