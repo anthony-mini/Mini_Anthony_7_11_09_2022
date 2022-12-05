@@ -39,6 +39,46 @@
     margin-left: 16px;
 }
 
+@mixin typographie-404-component {
+    font: {
+        style: normal;
+        family: 'Montserrat', sans-serif, arial;
+        size: map-get($font-size, size6);
+        weight: map-get($montserrat, bold);
+    };
+    
+    line-height: 137px;
+    color: $salmon-color;
+    text-align: center;
+}
+
+@mixin typographie-error-component {
+    font: {
+        style: normal;
+        family: 'Montserrat', sans-serif, arial;
+        size: map-get($font-size, size2);
+        weight: map-get($montserrat, medium);
+    };
+    
+    line-height: 26px;
+    color: $salmon-color;
+    text-align: center;
+}
+
+@mixin typographie-errorLink-component {
+    font: {
+        style: normal;
+        family: 'Montserrat', sans-serif, arial;
+        size: map-get($font-size, size1);
+        weight: map-get($montserrat, medium);
+    };
+    
+    line-height: 20px;
+    color: $salmon-color;
+    text-align: center;
+    text-decoration: underline;
+}
+
 @mixin underline-animation {
     border-bottom: 1px solid $salmon-color;
 }

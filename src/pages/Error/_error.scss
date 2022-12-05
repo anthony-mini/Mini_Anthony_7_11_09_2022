@@ -1,0 +1,21 @@
+.error{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    //margin: 0px 57px;
+
+    h2{
+        margin: 195px 0px 11px 0px;
+        @include typographie-404-component;
+    }
+
+    p{
+        margin: 0px 30px 133px 30px;
+        @include typographie-error-component;
+    }
+
+    a{
+        margin-bottom: 235px;
+        @include typographie-errorLink-component
+    }
+}

@@ -4,7 +4,7 @@
     justify-content: space-between;
     margin-top: 20px;
     
-    @media screen and (min-width: map-get($breakpoint, laptop-L)){
+    @media screen and (min-width: map-get($breakpoint, laptop)){
        margin-top: 40px;
       }
 
