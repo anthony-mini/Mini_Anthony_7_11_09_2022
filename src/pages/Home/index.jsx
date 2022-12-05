@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Banner from '../../components/Banner/home';
 
 export default function Home() {
   useEffect(() => {
@@ -7,7 +8,7 @@ export default function Home() {
 
   return (
     <main>
-      <h1>Page d'accueil</h1>
+      <Banner />
     </main>
   );
 }

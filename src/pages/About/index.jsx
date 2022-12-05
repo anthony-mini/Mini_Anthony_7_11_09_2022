@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Banner from '../../components/Banner/about';
 
 export default function About() {
   useEffect(() => {
@@ -7,7 +8,7 @@ export default function About() {
 
   return (
     <div>
-      <h1>À propos</h1>
+      <Banner />
     </div>
   );
 }
