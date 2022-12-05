@@ -2,6 +2,10 @@
 
     margin: 16px 0px 22px 0px;
 
+    @media screen and (min-width: map-get($breakpoint, laptop)){
+        margin-top: 40px;
+    }
+
     &__conteneur{
         display: flex;
         align-items: center;
@@ -43,6 +47,10 @@
 .layout {
 
     margin: 17px 0px 19px 0px;
+
+    @media screen and (min-width: map-get($breakpoint, laptop)){
+        margin-top: 44px;
+    }
 
     &__conteneur{
         display: flex;
