@@ -1,0 +1,77 @@
+.banner {
+
+    margin-bottom: 22px;
+
+    &__conteneur{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 111px;
+        border-radius: 10px;
+        background-image: url("../../../public/assets/home-banner-img.webp");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        @media screen and (max-width: map-get($breakpoint, laptop)) {
+            padding-right: 100px;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $black-color;
+            opacity: 0.3;
+            mix-blend-mode: darken;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        
+    }
+
+    h1{
+        z-index: 2;
+        @include typographie-banner-component;
+    }
+}
+
+.layout {
+    margin-bottom: 19px;
+
+    &__conteneur{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 223px;
+        border-radius: 10px;
+        background-image: url("../../../public/assets/about-us-banner-img.webp");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        @media screen and (max-width: map-get($breakpoint, laptop)) {
+            padding-right: 100px;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $black-color;
+            opacity: 0.3;
+            mix-blend-mode: darken;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        
+    }
+}
