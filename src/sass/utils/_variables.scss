@@ -24,9 +24,15 @@ $breakpoint: (
    desktop-XL: 2000px,
 );
 
-/**
-    font-familly
-**/
+$font-size: (
+    size1: 14px,
+    size2: 18px,
+    size3: 24px,
+    size4: 36px,
+    size5: 48px,
+);
+
+// Font-weight :
 
 $montserrat: (
     regular: 400,
