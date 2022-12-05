@@ -1,9 +1,10 @@
-@import './base/base';
 @import './base/reset';
 
 @import './utils/variables';
 @import './utils/mixins';
 @import './utils/keyframes';
+
+@import './base/base';
 
 @import './../components/Header/header';
 @import './../components/Footer/footer';
