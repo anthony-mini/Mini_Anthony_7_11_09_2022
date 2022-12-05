@@ -2,7 +2,11 @@
 
     display: flex;
     justify-content: space-between;
-    margin-bottom: 16px;
+    margin-top: 20px;
+    
+    @media screen and (min-width: map-get($breakpoint, laptop-L)){
+       margin-top: 40px;
+      }
 
     &__img{
         width: 145px;
