@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 export default function Error() {
   const width = window.innerWidth;
-  console.log(width);
 
   useEffect(() => {
     document.title = `Nous ne trouvons pas la page recherchée`;
