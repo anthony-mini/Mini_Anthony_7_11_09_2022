@@ -1,53 +1,41 @@
-.collapse{
+.collapsible {
+
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    &__content{
-
-        margin-bottom: 20px;
-        background-color: $grey-background-color;
-        border-radius: 5px;
-        width: 100%;
-        max-width: 1023px;
-        height: auto;
-
-        div{
-        position: relative;
+    margin-bottom: 20px;
+     
+    &__header{
         background-color: $salmon-color;
+        padding: 6px;
+        cursor: pointer;
         border-radius: 5px;
         width: 100%;
         height: 30px;
+        position: relative;
 
-            h2{
-                @include typographie-collapse-title;
-                margin: 5.5px 0px 5.46px 11.51px;
-                position: absolute;
-                bottom: 0;
-                left: 0; 
-            }
-
-            img{
-                width: 18.46px;
-                height: 19.37px;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                margin: 5.77px 5.19px 5.77px 0px; 
-                
-                img > .rotate{
-                    transform: rotate(180deg);
-                }
-            }
+        h2{
+            @include typographie-collapse-title;
         }
 
-        p{
-            @include typographie-collapse-description;
-            padding: 17.31px 11.5px 53px 11.5px;
+        .fa-solid, .fas{
+            color: white;
+            position: absolute;
+            bottom: 5.77px;
+            right: 5.18px;
+          }
+    }
 
-            @media screen and (min-width: map-get($breakpoint, laptop)) {
-                padding-bottom: 10px;
-            }
-        }
+    &__content {
+        background-color: $grey-background-color;
+        @include typographie-collapse-description;
+        padding: 17.31px 11.5px 53px 11.5px;
+        border-radius: 0 0 5px 5px;
+        @media screen and (min-width: map-get($breakpoint, laptop)) {
+            padding-bottom: 10px;
+      }
+ 
     }
 }
+
+  

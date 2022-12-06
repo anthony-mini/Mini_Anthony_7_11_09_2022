@@ -1,13 +1,20 @@
-import Arrow from '../../assets/collapse-arrow.svg';
+import useCollapse from 'react-collapsed';
 
-export default function Collapse({ title, description }) {
+// https://www.npmjs.com/package/react-collapsed
+
+export default function Collapsible({ title, description }) {
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
   return (
-    <article className="collapse__content">
-      <div>
+    <article className="collapsible">
+      <div className="collapsible__header" {...getToggleProps()}>
         <h2>{title}</h2>
-        <img className='rotate' src={Arrow} alt="arrow-icone" />
+        <div className="icon">
+          <i className={'fas fa-chevron-' + (isExpanded ? 'up' : 'down')}></i>
+        </div>
       </div>
-      <p>{description}</p>
+      <div {...getCollapseProps()}>
+        <p className="collapsible__content">{description}</p>
+      </div>
     </article>
   );
 }
