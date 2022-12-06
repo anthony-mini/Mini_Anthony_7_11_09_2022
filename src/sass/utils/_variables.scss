@@ -15,7 +15,7 @@ $grey-personas-color: #C4C4C4; // Personas background color
 **/
 
 $breakpoint: (
-   mobile-S: 320px,
+   mobile-S: 350px,
    mobile-M: 375px,
    mobile-L: 425px,
    tablette: 768px,
@@ -25,6 +25,8 @@ $breakpoint: (
 );
 
 $font-size: (
+    size: 12px,
+    size0: 13px,
     size1: 14px,
     size2: 18px,
     size3: 24px,
