@@ -15,7 +15,7 @@ export default function KasaRoutes() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
-        <Route path="/logement" element={<Lodging />} />
+        <Route path="/logement/:id" element={<Lodging />} />
         <Route path="/*" element={<Error />} />
       </Routes>
       <Footer />

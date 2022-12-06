@@ -79,6 +79,19 @@
     text-decoration: underline;
 }
 
+@mixin typographie-thumbnail {
+    font: {
+        style: normal;
+        family: 'Montserrat', sans-serif, arial;
+        size: map-get($font-size, size2);
+        weight: map-get($montserrat, medium);
+    };
+    
+    line-height: 26px;
+    color: $white-color;
+    text-align: start;
+}
+
 @mixin underline-animation {
     border-bottom: 1px solid $salmon-color;
 }
