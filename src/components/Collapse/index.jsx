@@ -1,19 +1,25 @@
-import useCollapse from 'react-collapsed';
-
-// https://www.npmjs.com/package/react-collapsed
+import { useState } from 'react';
 
 export default function Collapsible({ title, description }) {
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
-  return (
+  const [isOpen, setIsOpen] = useState(false);
+
+  return isOpen ? (
     <article className="collapsible">
-      <div className="collapsible__header" {...getToggleProps()}>
+      <div className="collapsible__header" onClick={() => setIsOpen(false)}>
         <h2>{title}</h2>
         <div className="icon">
-          <i className={'fas fa-chevron-' + (isExpanded ? 'up' : 'down')}></i>
+          <i className={'fas fa-chevron-' + (isOpen ? 'up' : 'down')}></i>
         </div>
       </div>
-      <div {...getCollapseProps()}>
-        <p className="collapsible__content">{description}</p>
+      <p className={'collapsible__content'}>{description}</p>
+    </article>
+  ) : (
+    <article className="collapsible">
+      <div className="collapsible__header" onClick={() => setIsOpen(true)}>
+        <h2>{title}</h2>
+        <div className="icon">
+          <i className={'fas fa-chevron-' + (isOpen ? 'up' : 'down')}></i>
+        </div>
       </div>
     </article>
   );
