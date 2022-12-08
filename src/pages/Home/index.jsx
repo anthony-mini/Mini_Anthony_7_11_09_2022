@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Lodgings from '../../data/lodgings.json';
 import Banner from '../../components/Banner/home';
-import Thumbnail from '../../components/Thumbnail/thumbnail';
+import Thumbnail from '../../components/Thumbnail';
 
 export default function Home() {
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <Banner />
-      <section className='thumbnail'>
+      <section className="thumbnail">
         {Lodgings.map((lodging) => (
           <Thumbnail
             key={lodging.id}
