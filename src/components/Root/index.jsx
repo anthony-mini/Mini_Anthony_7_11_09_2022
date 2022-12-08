@@ -8,7 +8,7 @@ import About from '../../pages/About';
 import Lodging from '../../pages/Lodging';
 import Error from '../../pages/Error';
 
-export default function KasaRoutes() {
+export default function Root() {
   return (
     <Router>
       <Header />
