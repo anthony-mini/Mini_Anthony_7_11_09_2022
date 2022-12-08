@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <>
       {isLoading && <Loader />}
       {
         <main>
@@ -40,6 +40,6 @@ export default function Home() {
           </section>
         </main>
       }
-    </div>
+    </>
   );
 }
