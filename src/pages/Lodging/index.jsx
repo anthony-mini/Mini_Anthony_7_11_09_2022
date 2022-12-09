@@ -2,11 +2,14 @@ import { useEffect } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import Lodgings from '../../data/lodgings.json';
 import Collapse from '../../components/Collapse';
+import Banner from '../../components/Banner/about';
 
 export default function Lodging(props) {
   // Get slot ID with `useParams` hook
   const { id } = useParams();
   const lodging = Lodgings.find((l) => l.id === id);
+
+  const tags = lodging.tags;
 
   useEffect(() => {
     if (lodging) {
@@ -16,12 +19,32 @@ export default function Lodging(props) {
     }
   });
 
-  console.log(id);
-
   return lodging ? (
     // If the lodging is found, we display this sheet
     <main>
-      <div>
+      <section>
+        <article className="slideshow__content"></article>
+      </section>
+      <Banner />
+      <section className="sheet">
+        <div className="sheet--left">
+          <h1 className="sheet__title">{lodging.title}</h1>
+          <h2 className="sheet__location">{lodging.location}</h2>
+          <ul className="sheet__tags">
+            {tags.map((tag, index) => (
+              <li className="sheet__tags--tag" key={index}>
+                {tag}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="sheet--right">
+          <div className="personnas">
+            <img src={lodging.host.picture} alt='personnas photos' />
+          </div>
+        </div>
+      </section>
+      <section className="collapse__content--lodging">
         <Collapse
           title="Description"
           key={lodging.description}
@@ -32,7 +55,7 @@ export default function Lodging(props) {
           key={lodging.equipments}
           equipments={lodging.equipments}
         />
-      </div>
+      </section>
     </main>
   ) : (
     // If the lodging is not found, the error page is displayed

@@ -141,3 +141,29 @@
         padding-bottom: 10px;
     }
 }
+
+@mixin typographie-sheet-title {
+    font: {
+        style: normal;
+        family: 'Montserrat', sans-serif, arial;
+        size: map-get($font-size, size2);
+        weight: map-get($montserrat, medium);
+    };
+    
+    line-height: 26px;
+    color: $salmon-color;
+    text-align: start;
+}
+
+@mixin typographie-sheet-location {
+    font: {
+        style: normal;
+        family: 'Montserrat', sans-serif, arial;
+        size: map-get($font-size, size1);
+        weight: map-get($montserrat, medium);
+    };
+    
+    line-height: 20px;
+    color: $salmon-color;
+    text-align: start;
+}
