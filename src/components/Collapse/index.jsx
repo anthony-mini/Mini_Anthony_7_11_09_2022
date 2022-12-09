@@ -1,7 +1,20 @@
 import React, { useState } from 'react';
 
-export default function Collapsible({ title, description, equipments}) {
+export default function Collapsible({ title, description, equipments }) {
   const [isOpen, setIsOpen] = useState(false);
+
+
+  // Récupération de l'url de la page 
+  const pathname = window.location.pathname;
+
+  let className = '';
+
+  //Si l'URL correspond à la page `À propos` le style correspondant lui est attribué. 
+  if (pathname === '/about-us') {
+    className = 'collapsible__content--about';
+  } else {
+    className = 'collapsible__content--sheet';
+  }
 
   return isOpen ? (
     <article className="collapsible">
@@ -15,12 +28,12 @@ export default function Collapsible({ title, description, equipments}) {
       {typeof description === 'string' ? (
         // Si la description est un string, on affiche un paragraphe
         <React.Fragment>
-          <p className={'collapsible__content'}>{description}</p>
+          <p className={className}>{description}</p>
         </React.Fragment>
       ) : (
         // Si la description n'est pas un string, on affiche une liste
         <React.Fragment>
-          <ul className={'collapsible__content'}>
+          <ul className={className}>
             {equipments.map((equipment) => (
               // `map()` : parcour chaque élément du tableau et retourne une nouvelle liste d'éléments, qui s'afficheront dans une liste.
               <li>{equipment}</li>
