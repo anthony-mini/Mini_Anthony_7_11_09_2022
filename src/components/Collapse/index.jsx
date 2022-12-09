@@ -34,9 +34,9 @@ export default function Collapsible({ title, description, equipments }) {
         // Si la description n'est pas un string, on affiche une liste
         <React.Fragment>
           <ul className={className}>
-            {equipments.map((equipment) => (
+            {equipments.map((equipment, index) => (
               // `map()` : parcour chaque élément du tableau et retourne une nouvelle liste d'éléments, qui s'afficheront dans une liste.
-              <li>{equipment}</li>
+              <li key={index}>{equipment}</li>
             ))}
           </ul>
         </React.Fragment>
