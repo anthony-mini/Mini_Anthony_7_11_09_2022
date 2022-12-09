@@ -40,7 +40,10 @@ export default function Lodging(props) {
         </div>
         <div className="sheet--right">
           <div className="personnas">
-            <img src={lodging.host.picture} alt='personnas photos' />
+            <p>{lodging.host.name}</p>
+            <img src={lodging.host.picture} alt="personnas photos" />
+          </div>
+          <div className="rating">
           </div>
         </div>
       </section>

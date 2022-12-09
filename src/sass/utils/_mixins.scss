@@ -167,3 +167,15 @@
     color: $salmon-color;
     text-align: start;
 }
+@mixin typographie-host-name {
+    font: {
+        style: normal;
+        family: 'Montserrat', sans-serif, arial;
+        size: map-get($font-size, size1);
+        weight: map-get($montserrat, medium);
+    };
+    
+    line-height: 17px;
+    color: $salmon-color;
+    text-align: right;
+}

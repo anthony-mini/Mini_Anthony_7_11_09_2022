@@ -37,11 +37,21 @@
 .personnas{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin: 0px 0px 10.5px 16.5px;
 
     img{
         border-radius: 50%;
         width: 32px;
         height: 32px;
+    }
+
+    p{
+        height: auto;
+        width: 43px;
+        @include typographie-host-name;
+        margin-right: 10px;
+        display: flex;
+        justify-content: flex-end
     }
 }
