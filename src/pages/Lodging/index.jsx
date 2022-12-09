@@ -27,7 +27,7 @@ export default function Lodging(props) {
           key={lodging.description}
           description={lodging.description}
         />
-        <Collapse className='name'
+        <Collapse
           title="Équipements"
           key={lodging.equipments}
           equipments={lodging.equipments}
