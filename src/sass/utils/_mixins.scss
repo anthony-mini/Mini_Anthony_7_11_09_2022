@@ -127,3 +127,17 @@
     mix-blend-mode: darken;
     opacity: 0.3;
 }
+
+@mixin collapse__content{
+    background-color: $grey-background-color;
+    @include typographie-collapse-description;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    opacity: 0;
+    animation: CollapseAnimation 1s cubic-bezier(0.4, 0, 0.2, 1) forwards ;
+    z-index: -1;
+    
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        padding-bottom: 10px;
+    }
+}
