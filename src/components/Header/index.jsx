@@ -1,7 +1,28 @@
 import Logo from './../../assets/logo-kasa.svg';
 import { Link } from 'react-router-dom';
+import React from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
+  // Récupération de l'URL
+  const pathname = window.location.pathname;
+
+  // Définit le status actif/inactif des pages montés.
+  const [isActiveHome, setClassNameHome] = useState(false);
+  const [isActiveAbout, setClassNameAbout] = useState(false);
+
+  // Si l'URL correspond à la page Active, le lien prend le style correspondant à celui attribué.
+  useEffect(() => {
+    if (pathname === '/') {
+      setClassNameHome(true);
+    } else if (pathname === '/about-us') {
+      setClassNameAbout(true);
+    } else {
+      setClassNameHome(false);
+      setClassNameAbout(false);
+    }
+  }, [pathname]);
+
   return (
     <header className="header">
       <Link to="/">
@@ -10,10 +31,28 @@ export default function Header() {
       <nav className="header__nav">
         <ul className="header__nav--list">
           <li>
-            <Link to="/">Accueil</Link>
+            <Link
+              to="/"
+              className={
+                isActiveHome
+                  ? 'header__nav--home--underline'
+                  : 'header__nav--home'
+              }
+            >
+              Accueil
+            </Link>
           </li>
           <li>
-            <Link to="/about-us">A Propos</Link>
+            <Link
+              to="/about-us"
+              className={
+                isActiveAbout
+                  ? 'header__nav--about--underline'
+                  : 'header__nav--about'
+              }
+            >
+              A Propos
+            </Link>
           </li>
         </ul>
       </nav>

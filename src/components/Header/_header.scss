@@ -22,7 +22,7 @@
         display: flex;
         align-items: center;
 
-        & ul{
+        &--list{
             display: flex;
             flex-direction: row;
             margin-top: 5px;
@@ -31,14 +31,20 @@
                 margin-left: 15px;
             }
 
-            & li a{
-                @include typographie-header-component;
-
-                &:hover {
-                    @include underline-animation;
-                }
-            }
         }
-    }
+        &--about,
+        &--home{
+            @include typographie-header-component;
+        }
 
+        &--about--underline,
+        &--home--underline{
+            @include typographie-header-component;
+            @include underline-animation;
+        }
+    }  
 }
+
+// &:hover {
+//     @include underline-animation;
+// }
