@@ -16,6 +16,16 @@
             display: none;
         }
 
+        @media screen and (min-width: map-get($breakpoint, laptop)){
+            width: 197px;
+            height: 63.69px;
+        }
+
+        @media screen and (min-width: map-get($breakpoint, laptop-L)){
+            width: 210.32px;
+            height: 68px;
+        }
+
     }
 
     &__nav{
@@ -29,7 +39,16 @@
 
             :nth-child(2) {
                 margin-left: 15px;
+                
+                @media screen and (min-width: map-get($breakpoint, laptop)){
+                    margin-left: 30px;
+                }
+
+                @media screen and (min-width: map-get($breakpoint, laptop-L)){
+                    margin-left: 57px;
+                }
             }
+
 
         }
         &--about,
@@ -44,7 +63,3 @@
         }
     }  
 }
-
-// &:hover {
-//     @include underline-animation;
-// }

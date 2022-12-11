@@ -9,8 +9,18 @@
     text-align: right;
     color: $salmon-color;
 
-    @media screen and (max-width: map-get($breakpoint, laptop)) {
+    @media screen and (max-width: 1023px) {
         text-transform: uppercase;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        font-size: map-get($font-size, size2);
+        line-height: 28px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        font-size: map-get($font-size, size3);
+        line-height: 34px;
     }
 }
 
