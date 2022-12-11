@@ -11,6 +11,10 @@
     p{
         margin: 0px 30px 133px 30px;
         @include typographie-error-component;
+
+        @media screen and (min-width: map-get($breakpoint, tablette)) {
+            margin: 0px 100px 133px 100px;
+        }
     }
 
     a{

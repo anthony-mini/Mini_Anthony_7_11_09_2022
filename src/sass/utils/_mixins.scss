@@ -34,6 +34,11 @@
     line-height: 17.22px;
     text-align: right;
     color: $white-color;
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        font-size: 24px;
+        line-height: 34.22px;
+    }
 }
 
 @mixin typographie-banner-component {
@@ -60,6 +65,21 @@
     line-height: 137px;
     color: $salmon-color;
     text-align: center;
+
+    @media screen and (min-width: map-get($breakpoint, tablette)) {
+        font-size: 180px;
+        line-height: 300px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        font-size: 268px;
+        line-height: 380px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        font-size: 288px;
+        line-height: 411px;
+    }
 }
 
 @mixin typographie-error-component {
@@ -73,6 +93,21 @@
     line-height: 26px;
     color: $salmon-color;
     text-align: center;
+
+    @media screen and (min-width: map-get($breakpoint, tablette)) {
+        font-size: 30px;
+        line-height: 53px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        font-size: 34px;
+        line-height: 33px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        font-size: 36px;
+        line-height: 51px;
+    }
 }
 
 @mixin typographie-errorLink-component {
@@ -87,6 +122,11 @@
     color: $salmon-color;
     text-align: center;
     text-decoration: underline;
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        font-size: 18px;
+        line-height: 26px;
+    }
 }
 
 @mixin typographie-thumbnail {
