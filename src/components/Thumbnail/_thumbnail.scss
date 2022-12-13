@@ -13,6 +13,8 @@
     
     &__img{
         position: relative;
+        display: flex;
+        justify-content: flex-start;
 
         @media screen and (min-width: map-get($breakpoint, tablette)) {
             min-height: 447px;
@@ -48,7 +50,7 @@
             position: absolute;
             bottom: 0;
             z-index: 2;
-            margin: 0px 19.71px 15px 19.71px;
+            margin: 0px 18% 15px 19.71px;
         }
 
         &::after{
