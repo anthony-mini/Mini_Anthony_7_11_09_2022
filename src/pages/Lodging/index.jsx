@@ -28,7 +28,7 @@ export default function Lodging(props) {
     <React.Fragment>
       <Header />
       <main>
-        <section>
+        <section className="slideshow">
           <Slideshow pictures={lodging.pictures} alt={lodging.title} />
         </section>
         <section className="sheet">
@@ -46,7 +46,10 @@ export default function Lodging(props) {
           <div className="sheet--right">
             <div className="personnas">
               <p>{lodging.host.name}</p>
-              <img src={lodging.host.picture} alt={`Photo de profil de : ` + lodging.host.name} />
+              <img
+                src={lodging.host.picture}
+                alt={`Photo de profil de : ` + lodging.host.name}
+              />
             </div>
             <Rating rating={lodging.rating} />
           </div>

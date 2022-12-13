@@ -42,7 +42,7 @@ export default function Slideshow({ pictures, alt }) {
         className="chevron--gauche"
       />
       <img className="slideshow__img" src={pictures[index]} alt={`Photo du logement : ` + alt} />
-      <div>
+      <div className='slidecount'>
         <SlideCount pictures={pictures} indexPicture={index} />
       </div>
     </article>
