@@ -8,9 +8,9 @@ export default function SlideCount({ pictures, indexPicture }) {
     <>
       {arrayPictures.map((nbSlides, index) =>
         indexPicture >= nbSlides ? (
-          <div key={index}> . </div>
+          <i key={index} className="fa-solid fa-circle"></i>
         ) : (
-          <div key={index}> o </div>
+          <i key={index} className="fa-regular fa-circle"></i>
         )
       )}
     </>
