@@ -1,17 +1,25 @@
-export default function Rating(rating) {
-  let stars = '';
+import SharpStar from '../../assets/SharpStar.svg';
+import ThinStar from '../../assets/ThinStar.svg';
 
-  for (let i = 0; i < rating; i++) {
-    console.log('★'); // affiche une étoile pleine
-    //stars += '★';
-    stars += `<i class="fa-sharp fa-solid fa-star-sharp"></i>`;
-  }
+export default function Rating({ rating }) {
+  // Déclare et exporte la fonction Rating qui prend la propriété rating en paramètre
 
-  for (let i = rating; i < 5; i++) {
-    console.log('☆'); // affiche une étoile vide
-    //stars += '☆';
-    stars += `<i class="fa-sharp fa-solid fa-star-sharp"></i>`;
-  }
+  const grades = [1, 2, 3, 4, 5]; // Déclare un tableau de cinq notes
 
-  return stars;
+  return (
+    // Retourne un élément div qui contient les étoiles
+    <div className='rating'>
+      {grades.map((score, index) =>
+        // Pour chaque note dans le tableau, crée une étoile en fonction de la note spécifiée.
+        // La méthode map() explore toutes la notes présentes dans le tableau.
+        rating >= score ? (
+          // Tant que la note spécifiée est supérieure ou égale à la note actuelle, affiche une étoile pleine
+          <img key={index} className="rating--stars" src={SharpStar} alt="Sharp Star" />
+        ) : (
+          // Sinon, affiche une étoile vide
+          <img key={index} src={ThinStar} className="rating--stars" alt="Thin Star" />
+        )
+      )}
+    </div>
+  );
 }

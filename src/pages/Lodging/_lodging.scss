@@ -32,13 +32,21 @@
         margin: 0px 10px 10px 0px;
         }
     }
+
+    &--right {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 0px 16px 0px;
+    }
 }
 
 .personnas{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin: 0px 0px 10.5px 16.5px;
+    margin: 0px 0px 0px 16.5px;
 
     img{
         border-radius: 50%;

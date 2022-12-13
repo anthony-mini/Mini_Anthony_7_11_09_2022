@@ -49,9 +49,7 @@ export default function Lodging(props) {
               <p>{lodging.host.name}</p>
               <img src={lodging.host.picture} alt="personnas photos" />
             </div>
-            <div className="rating">
-              <Rating rating={lodging.rating} />
-            </div>
+            <Rating rating={lodging.rating} />
           </div>
         </section>
         <section className="collapse__content--lodging">
