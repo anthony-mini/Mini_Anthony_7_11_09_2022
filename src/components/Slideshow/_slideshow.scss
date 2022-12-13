@@ -46,16 +46,18 @@ img.chevron {
     display: flex;
     gap: 10px;
     background-color: #f7f7f7a8;
-    padding: 4px 20px;
+    padding: 4px 15px;
     border-radius: 10px;
 }
 
 i.fa-regular.fa-circle {
     font-size: 10px;
     color: #00000075;
+    margin-top: 1px;
 }
 
 i.fa-solid.fa-circle {
     font-size: 10px;
     color: #ff6060c4;
+    margin-top: 1px;
 }
