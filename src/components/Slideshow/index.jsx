@@ -1,5 +1,6 @@
 import ChevronRight from '../../assets/ChevronRight.svg';
 import ChevronLeft from '../../assets/ChevronLeft.svg';
+import SlideCount from './SlideCount';
 
 import React, { useState } from 'react';
 
@@ -41,6 +42,9 @@ export default function Slideshow({ pictures, alt }) {
         className="chevron--gauche"
       />
       <img className="slideshow__img" src={pictures[index]} alt={`Photo du logement : ` + alt} />
+      <div>
+        <SlideCount pictures={pictures} indexPicture={index} />
+      </div>
     </article>
   );
 }
