@@ -1,0 +1,31 @@
+.slideshow__content{
+    position: relative;
+    margin-top: 27px;
+}
+
+img.chevron {
+    &--gauche{
+        position: absolute;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        top: 116px;
+        left: 5px;
+    }
+
+    &--droit{
+        position: absolute;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        top: 116px;
+        right: 5px;
+    }
+}
+    
+.slideshow__img{
+    object-fit: cover;
+    width: 335px;
+    height: 255px;
+    border-radius: 10px;
+}

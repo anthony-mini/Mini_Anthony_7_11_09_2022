@@ -3,8 +3,8 @@ import { Navigate, useParams } from 'react-router-dom';
 import Lodgings from '../../data/lodgings.json';
 import Collapse from '../../components/Collapse';
 import Header from '../../components/Header';
-import Banner from '../../components/Banner/about';
 import Rating from '../../components/Rating';
+import Slideshow from '../../components/Slideshow';
 
 export default function Lodging(props) {
   // Get slot ID with `useParams` hook
@@ -29,9 +29,8 @@ export default function Lodging(props) {
       <Header />
       <main>
         <section>
-          <article className="slideshow__content"></article>
+          <Slideshow pictures={lodging.pictures} alt={lodging.title} />
         </section>
-        <Banner />
         <section className="sheet">
           <div className="sheet--left">
             <h1 className="sheet__title">{lodging.title}</h1>
@@ -47,7 +46,7 @@ export default function Lodging(props) {
           <div className="sheet--right">
             <div className="personnas">
               <p>{lodging.host.name}</p>
-              <img src={lodging.host.picture} alt="personnas photos" />
+              <img src={lodging.host.picture} alt={`Photo de profil de : ` + lodging.host.name} />
             </div>
             <Rating rating={lodging.rating} />
           </div>
