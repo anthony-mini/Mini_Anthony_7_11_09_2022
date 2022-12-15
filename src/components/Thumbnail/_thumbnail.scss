@@ -1,10 +1,18 @@
 .thumbnail{
 
     &__content{
+
+        @media screen and (min-width: map-get($breakpoint, mobile-L)) {
+        }
+
         @media screen and (min-width: map-get($breakpoint, tablette)) {
             width: 50%;
             min-height: 345px;
             padding: 0px 10px 0px 10px;
+        }
+
+        @media screen and (min-width: map-get($breakpoint, laptop)) {
+           padding: 0 20px 20px 20px;
         }
 
         @media screen and (min-width: map-get($breakpoint, laptop-L)) {
@@ -32,13 +40,14 @@
             border-radius: 10px;
             object-fit: cover;
             object-position: center;
+
+            @media screen and (min-width: map-get($breakpoint, mobile-L)) {
+                max-width: 450px;
+            }
             
             @media screen and (min-width: map-get($breakpoint, tablette)) {
                 min-height: 340px;
-            }
-
-            @media screen and (min-width: map-get($breakpoint, laptop)) {
-                min-height: 430px;
+                max-width: none;
             }
 
             @media screen and (min-width: map-get($breakpoint, laptop-L)) {
@@ -64,6 +73,10 @@
             border-radius: 10px;
             width: 100%;
             height: 100%;
+
+            @media screen and (max-width: map-get($breakpoint, mobile-L)) {
+                max-width: 450px;
+            }
         }
     }
 }
