@@ -1,6 +1,7 @@
 .slideshow{
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 
@@ -20,7 +21,8 @@ img.chevron {
         width: 24px;
         height: 24px;
         top: 116px;
-        left: 5px;
+        left: 0;
+        margin: 0px 5.84px;
     }
 
     &--droit{
@@ -29,15 +31,66 @@ img.chevron {
         width: 24px;
         height: 24px;
         top: 116px;
-        right: 5px;
+        right: 0;
+        margin: 0px 5.84px;
+    }
+
+    &--droit,
+    &--gauche {
+
+
+        @media screen and (min-width: map-get($breakpoint, mobile-L)) {
+            width: 13.85px;
+            height: 39.3px;
+            top: 113px;
+            margin: 0px 15px;
+        }
+
+        @media screen and (min-width: map-get($breakpoint, tablette)) {
+            width: 20.85px;
+            height: 39.3px;
+            top: 135px;
+            margin: 0px 15px;
+        }
+
+        @media screen and (min-width: map-get($breakpoint, laptop)) {
+            width: 26.85px;
+            height: 59.3px;
+            top: 138px;
+            margin: 0px 15px;
+        }
+
+        @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+            width: 46.85px;
+            height: 79.3px;
+            top: 165px;
+            margin: 0px 23.36px;
+        }
     }
 }
     
 .slideshow__img{
     object-fit: cover;
-    width: 335px;
+    width: 100%;
+    max-width: 1240px;
     height: 255px;
     border-radius: 10px;
+
+    @media screen and (min-width: map-get($breakpoint, mobile-L)) {
+       height: 275px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, tablette)) {
+        height: 315px;
+     }
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        height: 335px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        height: 415px;
+    }
 }
 
 .slidecount{
@@ -48,16 +101,31 @@ img.chevron {
     background-color: #f7f7f7a8;
     padding: 4px 15px;
     border-radius: 10px;
+
+    @media screen and (max-width: map-get($breakpoint, mobile-L)) {
+        padding: 3px 10px;
+        gap: 5px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, tablette)) {
+        bottom: 7px;
+    }
 }
 
 i.fa-regular.fa-circle {
     font-size: 10px;
     color: #00000075;
-    margin-top: 1px;
+
+    @media screen and (max-width: map-get($breakpoint, mobile-L)) {
+        font-size: 7px;
+    }
 }
 
 i.fa-solid.fa-circle {
     font-size: 10px;
     color: #ff6060c4;
-    margin-top: 1px;
+
+    @media screen and (max-width: map-get($breakpoint, mobile-L)) {
+        font-size: 7px;
+    }
 }
