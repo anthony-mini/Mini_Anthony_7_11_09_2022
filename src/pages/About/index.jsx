@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Header from '../../components/Header';
-import Banner from '../../components/Banner/about';
+import Banner from '../../components/Banner';
 import AboutUs from '../../data/about-us.json';
 import Collapse from '../../components/Collapse';
 

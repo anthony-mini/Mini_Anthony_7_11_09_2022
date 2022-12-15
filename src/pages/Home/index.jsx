@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Lodgings from '../../data/lodgings.json';
 import Header from '../../components/Header';
-import Banner from '../../components/Banner/home';
+import Banner from '../../components/Banner';
 import Thumbnail from '../../components/Thumbnail';
 import Loader from '../../components/Loader';
 
