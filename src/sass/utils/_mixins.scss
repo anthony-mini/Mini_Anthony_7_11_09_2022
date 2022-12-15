@@ -52,6 +52,16 @@
     line-height: 24px;
     color: $white-color;
     margin-left: 16px;
+
+    @media screen and (min-width: map-get($breakpoint, laptop)){
+        font-size: map-get($font-size, size4);
+        line-height: 68px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)){
+        font-size: map-get($font-size, size5);
+        line-height: 68px;
+    }
 }
 
 @mixin typographie-404-component {

@@ -3,7 +3,7 @@
     margin: 16px 0px 22px 0px;
 
     @media screen and (min-width: map-get($breakpoint, laptop)){
-        margin-top: 40px;
+        margin: 40px 0px 43px 0px;
     }
 
     &__conteneur{
@@ -19,7 +19,16 @@
         position: relative;
 
         @media screen and (max-width: map-get($breakpoint, laptop)) {
-            padding-right: 100px;
+           padding-right: 100px;
+        }
+
+        @media screen and (min-width: map-get($breakpoint, laptop)){
+            justify-content: center;
+            height: 143px;
+        }
+
+        @media screen and (min-width: map-get($breakpoint, laptop-L)){
+            height: 223px;
         }
 
         &::after{
