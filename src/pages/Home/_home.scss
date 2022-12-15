@@ -14,6 +14,15 @@
         background: #f7f7f7;
         border-radius: 15px;  
         padding: 30px 20px 30px 20px;
-    
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        gap: 20px 0px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        gap: 50px;
+        padding: 56px 50px 56px 50px;
+        justify-content: center;
     }
 }
