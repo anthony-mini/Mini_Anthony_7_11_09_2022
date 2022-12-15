@@ -19,12 +19,14 @@ export default function Slideshow({ pictures, alt }) {
     setIndex(index === 0 ? pictures.length - 1 : index - 1);
   };
 
-  console.log(index);
-
   return pictures.length === 1 ? (
     // Si le tableau ne contient qu'une seule image, on affiche cette image uniquement.
     <article className="slideshow__content">
-      <img className="slideshow__img" src={pictures[0]} alt={`Photo du logement : ` + alt} />
+      <img
+        className="slideshow__img"
+        src={pictures[0]}
+        alt={`Photo du logement : ` + alt}
+      />
     </article>
   ) : (
     // Si le tableau contient plusieurs images, on affiche la flèche de gauche, la flèche de droite et l'image actuelle en fonction de l'index.
@@ -41,8 +43,12 @@ export default function Slideshow({ pictures, alt }) {
         onClick={previousPicture}
         className="chevron--gauche"
       />
-      <img className="slideshow__img" src={pictures[index]} alt={`Photo du logement : ` + alt} />
-      <div className='slidecount'>
+      <img
+        className="slideshow__img"
+        src={pictures[index]}
+        alt={`Photo du logement : ` + alt}
+      />
+      <div className="slidecount">
         <SlideCount pictures={pictures} indexPicture={index} />
       </div>
     </article>
