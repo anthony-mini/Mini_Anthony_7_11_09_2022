@@ -253,6 +253,16 @@
     line-height: 26px;
     color: $salmon-color;
     text-align: start;
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        font-size: map-get($font-size, size3);
+        line-height: 36px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        font-size: map-get($font-size, size4);
+        line-height: 51px;
+    }
 }
 
 @mixin typographie-sheet-location {
@@ -266,6 +276,16 @@
     line-height: 20px;
     color: $salmon-color;
     text-align: start;
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        font-size: map-get($font-size, size2);
+        line-height: 20px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        font-size: map-get($font-size, size2);
+        line-height: 26px;
+    }
 }
 @mixin typographie-host-name {
     font: {
@@ -278,4 +298,14 @@
     line-height: 17px;
     color: $salmon-color;
     text-align: right;
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        font-size: map-get($font-size, size2);
+        line-height: 17px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        font-size: map-get($font-size, size2);
+        line-height: 26px;
+    }
 }

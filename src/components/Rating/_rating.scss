@@ -2,9 +2,28 @@
 
     display: flex;
 
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        margin-bottom: 31-24px;
+    }
+
     &--stars {
     width: 15px;
     height: 15px;
+    margin-right: 3.5px;
 
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        width: 15*1.5px;
+        height: 15*1.5px;
+        margin-right: 0;
+        margin-left: 7px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        width: 15*2px;
+        height: 15*2px;
+        margin-right: 0;
+        margin-left: 7px;
+    }
     }
 }

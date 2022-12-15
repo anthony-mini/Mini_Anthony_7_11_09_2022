@@ -29,6 +29,7 @@
 
         @media screen and (min-width: map-get($breakpoint, laptop)) {
             height: 37px;
+            border-radius: 7px;
         }
 
         @media screen and (min-width: map-get($breakpoint, laptop-L)) {
@@ -63,9 +64,9 @@
             }
 
             @media screen and (min-width: map-get($breakpoint, laptop-L)) {
-                bottom: 11px;
-                right: 23px;
-                font-size: 23px;
+                bottom: 10px;
+                right: 15px;
+                font-size: 27px;
             }
           }
     }
@@ -112,6 +113,41 @@
             @media screen and (min-width: map-get($breakpoint, laptop-L)) {
                 padding: 27px 11.5px 5px 11.5px;
             }
+        }
+    }
+}
+
+.collapse__content--lodging{
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: row;
+        gap: 76px;
+    } 
+
+    h2{
+        @media screen and (min-width: map-get($breakpoint, laptop)) {
+            font-size: 18px;
+            line-height: 25.67px;
+            font-weight: 500;
+        }
+    }
+    p{
+        @media screen and (min-width: map-get($breakpoint, laptop)) {
+            font-size: 18px;
+            line-height: 25.67px;
+            font-weight: 400;
+            padding: 22px 27px 47px 18px;
+        }
+    }
+
+    li{
+        @media screen and (min-width: map-get($breakpoint, laptop)) {
+            font-size: 18px;
+            line-height: 25.67px;
+            font-weight: 400;
         }
     }
 }
