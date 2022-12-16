@@ -7,7 +7,8 @@ export default function Error() {
 
   useEffect(() => {
     document.title = `Nous ne trouvons pas la page recherchée`;
-  });
+  }, []);
+
   return (
     <React.Fragment>
       <Header />
