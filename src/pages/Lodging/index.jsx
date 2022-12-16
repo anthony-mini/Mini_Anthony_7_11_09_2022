@@ -11,10 +11,6 @@ export default function Lodging(props) {
   const { id } = useParams();
   const lodging = Lodgings.find((l) => l.id === id);
 
-  // const rating = lodging.rating;
-  // const stars = Rating(rating);
-  // console.log('lodging' + stars);
-
   useEffect(() => {
     if (lodging) {
       // if lodging is well found, I modify the title
