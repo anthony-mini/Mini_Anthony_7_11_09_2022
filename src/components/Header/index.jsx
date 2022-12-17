@@ -13,9 +13,9 @@ export default function Header() {
 
   // Si l'URL correspond à la page Active, le lien prend le style correspondant à celui attribué.
   useEffect(() => {
-    if (pathname === '/#') {
+    if (pathname === '/#/') {
       setClassNameHome(true);
-    } else if (pathname === '#/about-us') {
+    } else if (pathname === '/#/about-us') {
       setClassNameAbout(true);
     } else {
       setClassNameHome(false);
@@ -25,14 +25,14 @@ export default function Header() {
 
   return (
     <header className="header">
-      <Link to="/">
+      <Link to="/#/">
         <img className="header__img" src={Logo} alt="Logo Kasa" />
       </Link>
       <nav className="header__nav">
         <ul className="header__nav--list">
           <li>
             <Link
-              to="/"
+              to="/#/"
               className={
                 isActiveHome
                   ? 'header__nav--home--underline'
@@ -44,7 +44,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              to="/about-us"
+              to="/#/about-us"
               className={
                 isActiveAbout
                   ? 'header__nav--about--underline'
