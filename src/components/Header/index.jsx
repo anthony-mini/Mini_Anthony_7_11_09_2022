@@ -13,9 +13,9 @@ export default function Header() {
 
   // Si l'URL correspond à la page Active, le lien prend le style correspondant à celui attribué.
   useEffect(() => {
-    if (pathname === '#/') {
+    if (pathname === '/') {
       setClassNameHome(true);
-    } else if (pathname === '#/about-us') {
+    } else if (pathname === '/about-us') {
       setClassNameAbout(true);
     } else {
       setClassNameHome(false);
