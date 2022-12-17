@@ -110,6 +110,20 @@ img.chevron {
     @media screen and (min-width: map-get($breakpoint, tablette)) {
         bottom: 7px;
     }
+
+    &--numbers {
+        position: absolute;
+        bottom: 25px;
+        font: {
+            family: 'Montserrat', sans-serif, arial;
+            size: map-get($font-size, size2);
+            weight: map-get($montserrat, medium);
+        };
+        
+        line-height: 25.67px;
+        text-align: center;
+        color: $white-color;
+    }
 }
 
 i.fa-regular.fa-circle {

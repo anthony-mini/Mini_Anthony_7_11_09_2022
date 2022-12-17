@@ -30,17 +30,29 @@ export default function Slideshow({ pictures, alt }) {
     </article>
   ) : (
     // Si le tableau contient plusieurs images, on affiche la flèche de gauche, la flèche de droite et l'image actuelle en fonction de l'index.
-    <article className="slideshow__content">
+    <article
+      className="slideshow__content"
+      tabIndex="0" // Attribut tabIndex qui permet au navigateur de savoir que le composant peut être focusé et que les événements de clavier peuvent être déclenchés dessus.
+      onKeyDown={(event) => {
+        if (event.key === 'ArrowLeft') {
+          // Si l'utilisateur appuie sur la flèche gauche, on affiche l'image précédente
+          previousPicture();
+        } else if (event.key === 'ArrowRight') {
+          // Si l'utilisateur appuie sur la flèche droite, on affiche l'image suivante
+          nextPicture();
+        }
+      }}
+    >
       <img
         src={ChevronRight}
         alt="suivant"
-        onClick={nextPicture}
+        onClick={nextPicture} // gestionnaire d'événements click pour passer à l'image suivante
         className="chevron--droit"
       />
       <img
         src={ChevronLeft}
         alt="précédent"
-        onClick={previousPicture}
+        onClick={previousPicture} // gestionnaire d'événements click pour passer à l'image précédente
         className="chevron--gauche"
       />
       <img
@@ -48,9 +60,7 @@ export default function Slideshow({ pictures, alt }) {
         src={pictures[index]}
         alt={`Photo du logement : ` + alt}
       />
-      <div className="slidecount">
         <SlideCount pictures={pictures} indexPicture={index} />
-      </div>
     </article>
   );
 }
