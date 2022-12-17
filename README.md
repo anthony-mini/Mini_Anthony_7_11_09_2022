@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dd704576-fbce-4205-8b9b-45acb4f6de7a/deploy-status)](https://app.netlify.com/sites/kasa-location-immo/deploys)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
