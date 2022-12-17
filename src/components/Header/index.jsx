@@ -4,8 +4,14 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 
 export default function Header() {
-  // Récupération de l'URL
-  const pathname = window.location.pathname;
+  // Récupérer l'URL complète de la page actuelle
+  const currentUrl = window.location.href;
+
+  // Permet de récupérer uniquement le chemin 'about-us' ou '', avec netlify.
+  const urlParts = currentUrl.split('/');
+  const pathname = urlParts[4];
+  console.log(urlParts); // affichera 'about-us' ou ''
+  console.log(pathname);
 
   // Définit le status actif/inactif des pages montés.
   const [isActiveHome, setClassNameHome] = useState(false);
@@ -13,9 +19,9 @@ export default function Header() {
 
   // Si l'URL correspond à la page Active, le lien prend le style correspondant à celui attribué.
   useEffect(() => {
-    if (pathname === '/') {
+    if (pathname === '') {
       setClassNameHome(true);
-    } else if (pathname === '#/about-us') {
+    } else if (pathname === 'about-us') {
       setClassNameAbout(true);
     } else {
       setClassNameHome(false);

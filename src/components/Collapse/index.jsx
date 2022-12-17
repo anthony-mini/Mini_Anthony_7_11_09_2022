@@ -3,14 +3,22 @@ import React, { useState } from 'react';
 export default function Collapsible({ title, description, equipments }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  // // Récupération de l'url de la page
+  // const pathname = window.location.pathname;
 
-  // Récupération de l'url de la page 
-  const pathname = window.location.pathname;
+  // Récupérer l'URL complète de la page actuelle
+  const currentUrl = window.location.href;
+
+  // Permet de récupérer uniquement le chemin 'about-us' ou '', avec netlify.
+  const urlParts = currentUrl.split('/');
+  const pathname = urlParts[4];
+  console.log(urlParts); // affichera 'about-us' ou ''
+  console.log(pathname);
 
   let className = '';
 
-  //Si l'URL correspond à la page `À propos` le style correspondant lui est attribué. 
-  if (pathname === '/about-us') {
+  //Si l'URL correspond à la page `À propos` le style correspondant lui est attribué.
+  if (pathname === 'about-us') {
     className = 'collapsible__content--about';
   } else {
     className = 'collapsible__content--sheet';
