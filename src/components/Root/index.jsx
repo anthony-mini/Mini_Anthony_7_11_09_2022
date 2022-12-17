@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+// HashRouter -> Contrôler de manière plus fine l'URL est mise à jour lorsque l'utilisateur navigue dans l'application avec netlify.
 
 import Home from '../../pages/Home';
 import About from '../../pages/About';

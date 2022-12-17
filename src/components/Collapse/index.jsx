@@ -10,7 +10,7 @@ export default function Collapsible({ title, description, equipments }) {
   let className = '';
 
   //Si l'URL correspond à la page `À propos` le style correspondant lui est attribué. 
-  if (pathname === '/about-us') {
+  if (pathname === '#/about-us') {
     className = 'collapsible__content--about';
   } else {
     className = 'collapsible__content--sheet';
