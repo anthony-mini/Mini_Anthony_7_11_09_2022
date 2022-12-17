@@ -15,7 +15,7 @@ export default function Header() {
   useEffect(() => {
     if (pathname === '/') {
       setClassNameHome(true);
-    } else if (pathname === '/about-us') {
+    } else if (pathname === '#/about-us') {
       setClassNameAbout(true);
     } else {
       setClassNameHome(false);
