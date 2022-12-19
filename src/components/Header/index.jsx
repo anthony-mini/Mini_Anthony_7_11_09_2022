@@ -10,8 +10,9 @@ export default function Header() {
   // Permet de récupérer uniquement le chemin 'about-us' ou '', avec netlify.
   const urlParts = currentUrl.split('/');
   const pathname = urlParts[4];
-  console.log(urlParts); // affichera 'about-us' ou ''
-  console.log(pathname);
+  const pathnameHome = urlParts[3];
+  // console.log(urlParts); // affichera 'about-us' ou ''
+  // console.log(pathname);
 
   // Définit le status actif/inactif des pages montés.
   const [isActiveHome, setClassNameHome] = useState(false);
@@ -19,7 +20,7 @@ export default function Header() {
 
   // Si l'URL correspond à la page Active, le lien prend le style correspondant à celui attribué.
   useEffect(() => {
-    if (pathname === '') {
+    if (pathnameHome === ''  || pathname === '') {
       setClassNameHome(true);
     } else if (pathname === 'about-us') {
       setClassNameAbout(true);
@@ -27,7 +28,7 @@ export default function Header() {
       setClassNameHome(false);
       setClassNameAbout(false);
     }
-  }, [pathname]);
+  }, [pathname, pathnameHome]);
 
   return (
     <header className="header">
