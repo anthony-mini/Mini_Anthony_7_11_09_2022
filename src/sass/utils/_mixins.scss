@@ -229,9 +229,9 @@
 }
 
 @mixin collapse__content{
-    background-color: $grey-background-color;
+    background: linear-gradient(179deg, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 30%);
     @include typographie-collapse-description;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px 5px 5px 5px;
     width: 100%;
     opacity: 0;
     animation: CollapseAnimation 1s cubic-bezier(0.4, 0, 0.2, 1) forwards ;
